@@ -10,6 +10,7 @@ void initSDLAudioPlugin(IPluginRegistry &registry);
 void initSDLInputPlugin(IPluginRegistry &registry);
 void initDX11Plugin(IPluginRegistry &registry);
 void initAsioPlugin(IPluginRegistry &registry);
+void initVulkanPlugin(IPluginRegistry &registry);
 
 void HalleyGame::init(const Environment& env, const Vector<String>& args)
 {
@@ -21,6 +22,10 @@ int HalleyGame::initPlugins(IPluginRegistry& registry)
 	initSDLSystemPlugin(registry, {});
 	initSDLAudioPlugin(registry);
 	initSDLInputPlugin(registry);
+
+#ifdef WITH_VULKAN
+	initVulkanPlugin(registry);
+#endif
 
 #ifdef WITH_METAL
 	initMetalPlugin(registry);
