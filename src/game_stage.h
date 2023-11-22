@@ -9,4 +9,8 @@ public:
 
 	void onVariableUpdate(Time) override;
 	void onRender(RenderContext&) const override;
+
+private:
+	std::unique_ptr<World> world;
+
 };

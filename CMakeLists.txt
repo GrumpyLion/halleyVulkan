@@ -18,7 +18,7 @@ elseif(UNIX)
 	set(SDL2_LIBRARIES /usr/lib/x86_64-linux-gnu/libSDL2.so)
 endif()
 
-project (halleyGame)
+project (halleyVulkan)
 set(REQUIRE_WINDOWS_10 1)
 set(HALLEY_PROJECT_EMBED 1)
 set(HALLEY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/halley)
@@ -47,4 +47,4 @@ set (HEADERS
 set (GEN_DEFINITIONS
 	)
 
-halleyProject(halleyGame "${SOURCES}" "${HEADERS}" "" "${GEN_DEFINITIONS}" ${CMAKE_CURRENT_SOURCE_DIR}/${HALLEY_GAME_BIN_DIR})
+halleyProject(halleyVulkan "${SOURCES}" "${HEADERS}" "" "${GEN_DEFINITIONS}" ${CMAKE_CURRENT_SOURCE_DIR}/${HALLEY_GAME_BIN_DIR})

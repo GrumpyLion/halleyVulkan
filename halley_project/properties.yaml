@@ -1,7 +1,7 @@
 assetPackManifest: halley_project/asset_manifest.yaml
-binName: halleyGame
+binName: halleyVulkan
 defaultZoom: 1
 importByExtension: false
-name: halleyGame
+name: halleyVulkan
 platforms: [pc]
 uuid: b3980e5c-6eba-48c4-a7bd-6f345e98211e
